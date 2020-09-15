@@ -2,9 +2,22 @@
     <textarea type="text " class="form-control text-md-center " rows="2"></textarea>
 </div>
 
-<ul class="list-group list-group-flush">
-    <li *ngFor="let tutorial of tutorials" class="list-group-item">{{ tutorial.nombre }}</li>
-</ul>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Título</a>
+    <a class="dropdown-item" href="#"> Fecha</a>
+    <!-- <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Something else here</a> -->
+</div>
+
+<div>
+    <ul class="list-group list-group-flush">
+        <li *ngFor="let tutorial of tutorials" class="list-group-item">
+            <div class="flex">{{tutorial.nombre }} <span> {{tutorial.fecha | date}}</span></div>
+            <div> {{tutorial.materia}}</div>
+        </li>
+    </ul>
+
+</div>
 
 <div>
     <button type="button " class="btn btn-danger btn-lg btn-block mt-2 " id="actulizationButton ">Eliminar Todos</button>
