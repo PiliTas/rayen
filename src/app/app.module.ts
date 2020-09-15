@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditComponent } from './components/edit/edit.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { LoadingComponent } from './components/shared/loading/loading.component';
+
 
 
 @NgModule({
@@ -18,7 +18,6 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     HomeComponent,
     EditComponent,
     NavbarComponent,
-    LoadingComponent
   ],
   imports: [
     BrowserModule,
