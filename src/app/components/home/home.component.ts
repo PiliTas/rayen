@@ -10,14 +10,14 @@ export class HomeComponent implements OnInit {
 
   error: boolean = false;
   errorMessage: string;
-  outputData:any;
-  results: any;
+  tutorials: any = [];
   constructor(private dataService: DataService) { }
 
   getData() {
     this.dataService.getData()
       .subscribe((resp: any) => {
-       console.log(resp);
+        this.tutorials = resp;
+        console.log(this.tutorials);
         this.error = false;
         }, (errorService) => {
           this.error = true;

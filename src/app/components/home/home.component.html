@@ -1,9 +1,11 @@
 <div class="input-group input-group-text bg-dark">
     <textarea type="text " class="form-control text-md-center " rows="2"></textarea>
 </div>
-<ul class="list-group">
-    <li class="list-group-item"> {{ element[0]}</li>
+
+<ul class="list-group list-group-flush">
+    <li *ngFor="let tutorial of tutorials" class="list-group-item">{{ tutorial.nombre }}</li>
 </ul>
+
 <div>
     <button type="button " class="btn btn-danger btn-lg btn-block mt-2 " id="actulizationButton ">Eliminar Todos</button>
 </div>
